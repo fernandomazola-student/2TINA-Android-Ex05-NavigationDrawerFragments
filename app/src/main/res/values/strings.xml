@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">2TINA-Android-Ex05-NavigationDrawerFragments</string>
     <string name="myapp">My App</string>
+    <string name="meunome">Fernando Mazola</string>
+    <string name="meurm">77282</string>
 </resources>
