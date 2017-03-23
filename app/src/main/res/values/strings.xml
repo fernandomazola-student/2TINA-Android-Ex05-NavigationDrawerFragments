@@ -4,4 +4,6 @@
     <string name="meunome">Fernando Mazola</string>
     <string name="meurm">77282</string>
     <string name="carros">Carros</string>
+    <string name="abrir">Abrir</string>
+    <string name="fechar">Fechar</string>
 </resources>
