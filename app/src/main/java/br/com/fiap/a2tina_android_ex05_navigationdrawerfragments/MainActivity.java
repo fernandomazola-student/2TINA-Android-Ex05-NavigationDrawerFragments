@@ -1,7 +1,9 @@
 package br.com.fiap.a2tina_android_ex05_navigationdrawerfragments;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.media.Image;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -27,5 +29,16 @@ public class MainActivity extends AppCompatActivity {
                 .load(R.drawable.gif1) // aqui é teu gif
                 .asGif()
                 .into(gif);
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                //Lógica para abrir a outra activity aqui
+                Intent it = new Intent(MainActivity.this, CarroActivity.class);
+                startActivity(it);
+                finish(); //Finalizamos essa activity para o usuário não voltar
+            }
+        }, 4000);
     }
 }
