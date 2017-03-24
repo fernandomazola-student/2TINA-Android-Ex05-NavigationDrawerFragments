@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/mnImpala"
+        android:title="@string/Impala"
+        />
 
+    <item android:id="@+id/mnCadilac"
+        android:title="@string/Cadilac"
+        />
+
+    <item android:id="@+id/mnMaverickGT"
+        android:title="@string/MaverickGT"
+        />
+
+    <item android:id="@+id/mnFusca"
+        android:title="@string/Fusca"/>
+
+    <item android:id="@+id/mnBrasilia"
+        android:title="@string/Brasilia"/>
+
+    <item android:id="@+id/mnCorvette1974"
+        android:title="@string/Corvette1974"/>
 </menu>

@@ -25,4 +25,11 @@
 
     </android.support.design.widget.NavigationView>
 
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fragment_container"
+        ></FrameLayout>
+
 </android.support.v4.widget.DrawerLayout>

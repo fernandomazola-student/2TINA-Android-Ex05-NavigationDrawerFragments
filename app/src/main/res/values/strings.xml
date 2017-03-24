@@ -6,4 +6,13 @@
     <string name="carros">Carros</string>
     <string name="abrir">Abrir</string>
     <string name="fechar">Fechar</string>
+    <string name="Impala">Impala</string>
+    <string name="Cadilac">Cadilac</string>
+    <string name="MaverickGT">Maverick GT</string>
+    <string name="Fusca">Fusca</string>
+    <string name="Brasilia">Brasilia</string>
+    <string name="Corvette1974">Corvette 1974</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
