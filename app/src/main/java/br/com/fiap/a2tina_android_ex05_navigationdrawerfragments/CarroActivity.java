@@ -3,6 +3,7 @@ package br.com.fiap.a2tina_android_ex05_navigationdrawerfragments;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,8 +14,12 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
+import layout.BrasiliaFragment;
 import layout.CadilacFragment;
+import layout.Covertte1974Fragment;
+import layout.FuscaFragment;
 import layout.ImpalaFragment;
+import layout.MaverickGTFragment;
 
 public class CarroActivity extends AppCompatActivity {
 
@@ -40,15 +45,27 @@ public class CarroActivity extends AppCompatActivity {
 
         navigationView = (NavigationView)findViewById(R.id.navigationview);
 
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener(){
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if (item.getItemId() == R.id.mnImpala){
-                    Toast.makeText(CarroActivity.this, "Sobre", Toast.LENGTH_SHORT).show();
-                }
-                return false;
-            }
-        });
+       navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+           @Override
+           public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+               if (item.getItemId() == R.id.mnImpala){
+                   getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ImpalaFragment()).addToBackStack(null).commit();
+               }else if(item.getItemId() == R.id.mnCadilac){
+                   getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CadilacFragment()).addToBackStack(null).commit();
+               }else if(item.getItemId() == R.id.mnMaverickGT){
+                   getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MaverickGTFragment()).addToBackStack(null).commit();
+               }else if(item.getItemId() == R.id.mnFusca){
+                   getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FuscaFragment()).addToBackStack(null).commit();
+               }else if(item.getItemId() == R.id.mnBrasilia){
+                   getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new BrasiliaFragment()).addToBackStack(null).commit();
+               }else if(item.getItemId() == R.id.mnCorvette1974){
+                   getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Covertte1974Fragment()).addToBackStack(null).commit();
+               }
+               drawerLayout = (DrawerLayout) findViewById(R.id.activity_carro);
+               drawerLayout.closeDrawer(GravityCompat.START);
+               return false;
+    }
+});
 
     }
 
@@ -59,7 +76,7 @@ public class CarroActivity extends AppCompatActivity {
 //        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).addToBackStack(null).commit();
 //    }
 //
-//    public void CarroImpala(View view){
-//           getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ImpalaFragment()).addToBackStack(null).commit();
-//   }
+//   public void CarroCadilac(){
+//       getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CadilacFragment()).commit();
+//  }
 }

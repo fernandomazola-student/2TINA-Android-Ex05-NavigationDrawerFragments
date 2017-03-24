@@ -9,10 +9,25 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
 
-        <include android:id="@+id/toolbar" layout="@layout/toolbar_main"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/fragment_container"
+            >
+
+            <include android:id="@+id/toolbar" layout="@layout/toolbar_main"/>
+        </FrameLayout>
+
+
+
+
+
+
     </LinearLayout>
 
     <android.support.design.widget.NavigationView
@@ -23,13 +38,11 @@
         app:headerLayout="@layout/navigationview_header"
         app:menu="@menu/menu_main">
 
+
+
     </android.support.design.widget.NavigationView>
 
 
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/fragment_container"
-        ></FrameLayout>
+
 
 </android.support.v4.widget.DrawerLayout>
