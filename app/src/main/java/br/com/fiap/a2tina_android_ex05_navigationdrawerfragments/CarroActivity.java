@@ -1,5 +1,6 @@
 package br.com.fiap.a2tina_android_ex05_navigationdrawerfragments;
 
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -61,13 +62,14 @@ public class CarroActivity extends AppCompatActivity {
 
                    Carros carro = carros.get(item.getItemId());
                    Intent intent = new Intent(CarroActivity.this, ImpalaFragment.class);
-                    Bundle b = new Bundle();
-                    b.putSerializable("carro", carro);
+                   Bundle b = new Bundle();
+                   intent.putExtra("carro", carro);
+                   //b.putSerializable("carro", carro);
+                   startActivity(intent);
 
-
-
-
-//                   getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ImpalaFragment(b)).addToBackStack(null).commit();
+//                   Fragment a = new ImpalaFragment();
+//                   a.setArguments(b);
+                   getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ImpalaFragment()).addToBackStack(null).commit();
                    //startIntentSenderFromFragment(new ImpalaFragment(), R.id.fragment_container).addToBackStack(null).commit();
 
 
