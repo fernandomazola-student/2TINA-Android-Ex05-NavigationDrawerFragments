@@ -1,18 +1,23 @@
 package br.com.fiap.a2tina_android_ex05_navigationdrawerfragments;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.BundleCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.Toast;
+
+import java.util.List;
 
 import layout.BrasiliaFragment;
 import layout.CadilacFragment;
@@ -28,11 +33,15 @@ public class CarroActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     FrameLayout fragmentContainer;
+    List<Carros> carros;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carro);
+
+        carros = GeraCarros.listaCarros();
+
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         drawerLayout = (DrawerLayout)findViewById(R.id.activity_carro);
         fragmentContainer = (FrameLayout)findViewById(R.id.fragment_container);
@@ -49,7 +58,20 @@ public class CarroActivity extends AppCompatActivity {
            @Override
            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                if (item.getItemId() == R.id.mnImpala){
-                   getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ImpalaFragment()).addToBackStack(null).commit();
+
+                   Carros carro = carros.get(item.getItemId());
+                   Intent intent = new Intent(CarroActivity.this, ImpalaFragment.class);
+                    Bundle b = new Bundle();
+                    b.putSerializable("carro", carro);
+
+
+
+
+//                   getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ImpalaFragment(b)).addToBackStack(null).commit();
+                   //startIntentSenderFromFragment(new ImpalaFragment(), R.id.fragment_container).addToBackStack(null).commit();
+
+
+
                }else if(item.getItemId() == R.id.mnCadilac){
                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CadilacFragment()).addToBackStack(null).commit();
                }else if(item.getItemId() == R.id.mnMaverickGT){

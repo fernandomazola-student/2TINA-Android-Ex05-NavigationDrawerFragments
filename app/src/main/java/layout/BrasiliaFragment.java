@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import br.com.fiap.a2tina_android_ex05_navigationdrawerfragments.Carros;
 import br.com.fiap.a2tina_android_ex05_navigationdrawerfragments.R;
 
 /**
@@ -25,6 +26,9 @@ public class BrasiliaFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_brasilia, container, false);
+
+
+
     }
 
 }
