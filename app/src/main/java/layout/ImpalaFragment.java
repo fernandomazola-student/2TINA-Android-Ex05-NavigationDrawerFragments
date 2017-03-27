@@ -21,7 +21,7 @@ import br.com.fiap.a2tina_android_ex05_navigationdrawerfragments.R;
  */
 public class ImpalaFragment extends Fragment {
 
-//    TextView txtnome;
+    TextView txtnome;
 
 
     public ImpalaFragment() {
@@ -39,10 +39,8 @@ public class ImpalaFragment extends Fragment {
         Carros carros = (Carros)getArguments().getSerializable("carro");
 //        txtnome = (TextView) container.findViewById(R.id.txtNome);
 //        txtnome.setText(carros.getNome());
-        View view = inflater.inflate(R.layout.fragment_impala, container, false);
 
-        TextView txtnome = (TextView) view.findViewById(R.id.txtNome);
-        return view;
+        return inflater.inflate(R.layout.fragment_impala, container, false);
 
     }
 
