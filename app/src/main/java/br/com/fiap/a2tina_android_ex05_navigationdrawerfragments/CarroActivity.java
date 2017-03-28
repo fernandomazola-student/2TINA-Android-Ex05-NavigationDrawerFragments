@@ -64,15 +64,15 @@ public class CarroActivity extends AppCompatActivity {
            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                 if (item.getItemId() == R.id.mnImpala){
-                    for(int i = 0; i < carros.size(); i++ ){
-
-                        if (carros.get(i).getNome().equals("Impala")){
-                            int ii = i;
-                            Toast.makeText(CarroActivity.this, carros.get(ii).getDescricao() + "" , Toast.LENGTH_SHORT).show();
-                        }
-
-                    }
-
+//                    for(int i = 0; i < carros.size(); i++ ){
+//
+//                        if (carros.get(i).getNome().equals("Impala")){
+//                            int ii = i;
+//                            Toast.makeText(CarroActivity.this, carros.get(ii).getDescricao() + "" , Toast.LENGTH_SHORT).show();
+//                        }
+//
+//                    }
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ImpalaFragment()).addToBackStack(null).commit();
                }else if(item.getItemId() == R.id.mnCadilac){
                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CadilacFragment()).addToBackStack(null).commit();
                }else if(item.getItemId() == R.id.mnMaverickGT){

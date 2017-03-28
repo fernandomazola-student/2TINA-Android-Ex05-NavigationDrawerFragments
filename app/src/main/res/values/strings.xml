@@ -11,8 +11,20 @@
     <string name="MaverickGT">Maverick GT</string>
     <string name="Fusca">Fusca</string>
     <string name="Brasilia">Brasilia</string>
-    <string name="Corvette1974">Corvette 1974</string>
+    <string name="Corvette1974">Corvette</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ImpalaAno">1960</string>
+    <string name="ImpalaDesc">A Chevrolet consolidou o nome Impala como sucesso da indústria automobilística norte-americana. Nascido nos anos dourados atravessa décadas sempre com inovações.</string>
+    <string name="CadillacAno">1952</string>
+    <string name="CadillacDesc">Cadillac é uma marca automotiva estadunidense, divisão da General Motors, fundada em 1902 por Henry M. Leland.</string>
+    <string name="CorvetteAno">1975</string>
+    <string name="CorvetteDesc">O Chevrolet Corvette foi um carro esportivo que foi produzido pela Chevrolet .</string>
+    <string name="FuscaAno">1990</string>
+    <string name="FuscaDesc">O Fusca ou Carocha foi o primeiro modelo de automóvel fabricado pela companhia alemã Volkswagen. Foi o carro mais vendido no mundo.</string>
+    <string name="BrasiliaAno">1978</string>
+    <string name="BrasiliaDesc">O Brasília foi um automóvel produzido de 1973 até 1982 pela Volkswagen do Brasil.</string>
+    <string name="MaverickAno">1975</string>
+    <string name="MaverickDesc">O Maverick foi um automóvel criado pela Ford dos Estados Unidos que obteve grande sucesso em seu país de origem.</string>
 </resources>
