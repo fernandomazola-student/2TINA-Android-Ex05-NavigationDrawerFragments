@@ -36,7 +36,7 @@ public class ImpalaFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        Carros carros = (Carros)getArguments().getSerializable("carro");
+//        Carros carros = (Carros)getArguments().getSerializable("carro");
 //        txtnome = (TextView) container.findViewById(R.id.txtNome);
 //        txtnome.setText(carros.getNome());
 
