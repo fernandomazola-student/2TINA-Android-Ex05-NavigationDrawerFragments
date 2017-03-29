@@ -26,7 +26,6 @@
                 android:layout_height="wrap_content"
 
                 android:layout_gravity="center"
-                tools:text="Aeee"
                 android:id="@+id/t"/>
         </FrameLayout>
 
